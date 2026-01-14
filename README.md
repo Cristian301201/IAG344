@@ -28,3 +28,4 @@ git remote -v
 alt shift a (comentarios)
 alt shift flecha arriba o abajo (copiar y pegar)
 alt flecha arriba o abajo (mover linea)
+cntrl shift k (Quita una linea de codigo seleccionada)

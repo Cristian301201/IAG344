@@ -10,7 +10,9 @@ python -m venev (nombre+version py) (crea entorno virtual)
 cd . para localizarse entre carpetas y archivos
 dir (verifica que me encuentro en el entrono virtual)
 env.3.14.2/scripts/activate (activa entorno virtual)
-set-ExecutionPolicy Unrestricted (Desbloquea la restriccion de activar scripts con el anterior comando)
+set-ExecutionPolicy Unrestricted (Desbloquea la restriccion de activar scripts con el anterior comando, funciona en panel pc)
+deactivate (descativa entorno virtual)
+
 ```
 ### Git
 ### ![Git](image-2.png)

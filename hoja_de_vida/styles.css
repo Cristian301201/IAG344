@@ -1,0 +1,13 @@
+*{
+    font-family: 'Montserrat' , 'sans-serif';
+}
+
+
+/* Color fondo columna izquierda */
+.bg-primary{
+    background-color: #2a4426 !important;
+}
+/* Tamaño foto de perfil */
+.imagen{
+    max-width: 80%;
+}

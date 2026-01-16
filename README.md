@@ -5,13 +5,17 @@
 
 ```
 python --version
-pip list (librerias)
 python -m venev (nombre+version py) (crea entorno virtual)
 cd . para localizarse entre carpetas y archivos
 dir (verifica que me encuentro en el entrono virtual)
-env.3.14.2/scripts/activate (activa entorno virtual)
+env3.14.2/scripts/activate (activa entorno virtual)
 set-ExecutionPolicy Unrestricted (Desbloquea la restriccion de activar scripts con el anterior comando, funciona en panel pc)
 deactivate (descativa entorno virtual)
+pip install "nombre libreria" (Instala librerias)
+pip list (Muestra lista de librerias instaladas)
+pytest (Realiza test de archivos py)
+>configure user snippets
+pip freeze > requirements.txt
 
 ```
 ### Git
@@ -39,3 +43,5 @@ alt shift a (comentarios)
 alt shift flecha arriba o abajo (copiar y pegar)
 alt flecha arriba o abajo (mover linea)
 cntrl shift k (Quita una linea de codigo seleccionada)
+```
+### Comandos CMD

@@ -41,3 +41,25 @@ def process_excel (path) :
         ws [ f"B{row}"].value , 
         ws [ f"C{row}"].value
         )
+    #Guardar cambios archivo
+    wb.save(path)
+
+# ================================================
+# Funcion process_excel_safe
+# ================================================
+
+def process_excel_safe ( path ) :
+    try :
+        process_excel ( path )
+        return True , "Archivo procesado correctamente"
+    except PermissionError : # Error cuando se intenta ejecutar con el archivo abierto
+        return (
+        False, "El archivo Excel está abierto.\n" # \n salta a la siguiente linea 
+        "Por favor, cierre Excel e intene nuveamente." 
+        )
+    
+    except KeyError : # Error cuando no encuentra la ruta a la hoja excel
+        return False , "Hoja 'Datos' no encontrada"
+    
+    except Exception as e : # Errores no conocidos con variable temporal e
+        return False , f"Error inesperado: {str(e)}"

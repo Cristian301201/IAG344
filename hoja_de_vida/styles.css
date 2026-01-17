@@ -2,12 +2,22 @@
     font-family: 'Montserrat' , 'sans-serif';
 }
 
-
 /* Color fondo columna izquierda */
 .bg-primary{
     background-color: #2a4426 !important;
 }
+
 /* Tamaño foto de perfil */
 .imagen{
     max-width: 80%;
+}
+
+/* Color barra de progreso */
+.progress-bar{
+    background-color: rgba(69, 134, 57, 0.89) !important;
+}
+
+/* Color texto columnas derecha */
+.text-primary{
+    color: rgb(45, 83, 41) !important;
 }

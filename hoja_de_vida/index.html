@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container my-5"> <!-- my = margen eje y -->
+    <div id = "cv" class="container my-5"> <!-- my = margen eje y -->
         <div class="row shadow-lg rounded-4 overflow-hidden"> <!-- shadow-lg = sombra, rouded = redondear, overflow-hidden = ocultar elementos que sobrepasan limite -->
 
             <!-- Columna izquierda -->
@@ -27,7 +27,7 @@
                     
                     alt="Foto_perfil">
                     <h3 class="fw-bold mb-2">Cristian Eduardo Correa Villamil</h3> <!-- fw-bold = bold al texto -->
-                    <h5>Desarrollador de Software Junior</h5>
+                    <h5>Estudiante<br>Desarrollador de Software Junior</h5>
                 </header>
 
                 <section class="my-4">
@@ -104,36 +104,112 @@
 
             <!-- Columna Derecha -->
             <div class = "col-md-8 p-4">
+
+                <!-- Experiencia Laboral -->
                 <section class="mb-3">
                     <h4 class="fw-bold text-primary mb-4">
                         <i class="fas fa-briefcase me-1"></i>
                         Experiencia Laboral
                     </h4>
-                    <div class="card mb-3 border-0 shadow-lg">
+                    <div class="card mb-3 border-0 shadow-sm">
                         <div class="card-body">
                             <h4 class="card-title fw-bold">
-                                No experiencia - Estudiante
+                                Inyeccion y Ensamble de Amarras 
                             </h4>
                             <h5 class="card-subtitle mb-2 text-muted small">
-                            <!-- Fecha de laboracion -->
+                                2025 / Feb - Oct
                             </h5>
                             <h6 class="text-primary">
-                                <!-- Lugar de trabajo -->
+                                AmarrasPlast
                             </h6>
                             <ul class="mt-3">
                                 <!-- Cargos empleados -->
-                                <!-- <li></li>
-                                <li></li>
-                                <li></li> -->
+                                <li>Ensamblaje e Inyeccion</li>
+                                <li>Apoyo de Ventas</li>
+                                <li>Coordinacion de Envios</li> 
                             </ul>
                         </div>
                     </div>
                 </section>
 
+                <!-- Educacion -->
+                 <section class="mb-3">
+                    <h4 class="fw-bold text-primary mb-4">
+                        <i class="fa-solid fa-graduation-cap me-1"></i>
+                        Educacion
+                    </h4>
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">
+                                Ingles
+                            </h4>
+                            <h5 class="card-subtitle mb-2 text-muted small">
+                                2023-2025
+                            </h5>
+                            <h6 class="text-primary">
+                                Centro Colombo Americano
+                            </h6>
+                            <ul class="mt-3">
+                                
+                                <li>Nivel B2</li>
+                                <li>Certificado de Estudio</li> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">
+                                Aspirante Analisis Y Desarrollo De Software
+                            </h4>
+                            <h5 class="card-subtitle mb-2 text-muted small">
+                                2025-Actualidad
+                            </h5>
+                            <h6 class="text-primary">
+                                Sena
+                            </h6>
+                            <ul class="mt-3">
+                                
+                                <li>Desarrollo de Software BackEnd con Herramientas Java, JavaScript</li>
+                                <li>Desarrollo de Software FrontEnd con Herramientas HTML, CSS</li>
+                                <li>Ingenieria de Requerimientos</li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">
+                                Bootcamp Inteligencia Artificial (En proceso)
+                            </h4>
+                            <h5 class="card-subtitle mb-2 text-muted small">
+                                2025 / Enero
+                            </h5>
+                            <h6 class="text-primary">
+                                Universidad de Caldas
+                            </h6>
+                            <ul class="mt-3">
+                                
+                                <li>Desarrollo de BackEnd Python</li>
+                                <li>Desarrollo de Modulos IA</li> 
+                                <li>Desarrollo FrontEnd HTML y CSS</li>
+                                <li>Certificado Ministerio de Educacion y Universidad de Caldas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                
             </div>
 
         </div>
     </div>
+
+    <!-- Boton Descargar -->
+     <div class="text-center my-5 no-print">
+    <button id="btn-pdf" class="btn btn-primary btn-lg border-0">
+        <i class="fas fa-file-pdf me-2"></i> Descargar PDF
+    </button>
+</div>
 
 </body>
 

@@ -5,7 +5,7 @@
 
 ```
 python --version
-python -m venev (nombre+version py) (crea entorno virtual)
+python -m venv (nombre+version py) (crea entorno virtual)
 cd . para localizarse entre carpetas y archivos
 dir (verifica que me encuentro en el entrono virtual)
 env3.14.2/scripts/activate (activa entorno virtual)

@@ -6,31 +6,3 @@ Crear un .exe
    `pyinstaller --onefile --windowed app.py`
 
 
-   *{
-    font-family: 'Montserrat' , 'sans-serif';
-}
-
-/* Color fondo columna izquierda */
-.bg-primary{
-    background-color: #2a4426 !important;
-}
-
-/* Tamaño foto de perfil */
-.imagen{
-    max-width: 80%;
-}
-
-/* Color barra de progreso */
-.progress-bar{
-    background-color: rgba(69, 134, 57, 0.89) !important;
-}
-
-/* Color texto columnas derecha */
-.text-primary{
-    color: rgb(50, 121, 42) !important;
-}
-
-/* Color boton */
-.btn-primary{
-    background-color:rgb(50, 121, 42) !important; 
-}

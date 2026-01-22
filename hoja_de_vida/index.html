@@ -17,7 +17,9 @@
 
 
 <body>
-    <div id = "cv" class="container my-5"> <!-- my = margen eje y -->
+    
+    <main id = "pdf-content">
+        <div class="container my-5"> <!-- my = margen eje y -->
         <div class="row shadow-lg rounded-4 overflow-hidden"> <!-- shadow-lg = sombra, rouded = redondear, overflow-hidden = ocultar elementos que sobrepasan limite -->
 
             <!-- Columna izquierda -->
@@ -203,6 +205,17 @@
             </div>
 
         </div>
+
+    </main>
+    <div class="text-center my-5 no-print">
+    <button id="btn-pdf" class="btn btn-primary btn-lg border-0">
+            Descargar PDF
+    </button>
     </div>
+    
+    <script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
 

@@ -1,6 +1,5 @@
  # CHATBOT SUPERVISADO
 
-from chatbot.data import training_data
 import os # Hace la conexion entre rutas
 import pickle #Guarda rutas
 
@@ -50,11 +49,11 @@ def build_and_train_model(train_pairs): # train_pairs: lista de pares (Pregunta,
     os.makedirs (MODEL_DIR, exist_ok=True)
 
     # Guardar los objetos entrenados
-    with open (MODEL_DIR, "wb") as f : #Manejo y apertura de archivos, wb para abrir archivos binarios
+    with open (MODEL_PATH, "wb") as f : #Manejo y apertura de archivos, wb para abrir archivos binarios
         pickle.dump (model, f) 
-    with open (MODEL_DIR, "wb") as f :
+    with open (VECTORIZER_PATH, "wb") as f :
         pickle.dump (vectorizer, f)
-    with open (MODEL_DIR, "wb") as f :
+    with open (ANSWER_PATH, "wb") as f :
         pickle.dump (unique_answer, f)
     print ("🆗 Modelo entrenado correctamente")
     

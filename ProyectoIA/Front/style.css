@@ -379,3 +379,32 @@ footer {
     font-weight: 700;
     color: #e10600;
 }
+
+/* ===== FIX NAVBAR MOBILE TRANSPARENCIA ===== */
+
+/* Fondo sólido cuando el menú mobile está abierto */
+.navbar .navbar-collapse.show {
+    background-color: rgba(139, 0, 0, 0.95); /* rojo Ducati sólido */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Links bien legibles en mobile */
+.navbar .navbar-collapse.show .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Separación entre links en mobile */
+.navbar .navbar-collapse.show .nav-item {
+    padding: 10px 0;
+}
+
+.sub-text{
+    color: red !important;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

@@ -67,5 +67,11 @@ chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sendMessage();
 });
 
+// Abrir chat
+openChatBtn.addEventListener('click', () => {
+    chatWindow.style.display = 'flex';
+    // openChatBtn.style.display = 'none'; // Comenta o borra esta línea si quieres que el botón siga ahí
+});
+
 
 

@@ -250,30 +250,25 @@ body {
     position: relative;
     z-index: 2;
 }
+/* BOTÓN CHATBOT ACTUALIZADO */
 .chatbot-button {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    
-    /* Tamaño y Forma */
+    bottom: 20px; /* Un poco más arriba en móvil */
+    right: 20px;
     padding: 10px 20px;
-    height: auto; /* Quitamos el alto fijo circular */
-    width: auto;  /* Quitamos el ancho fijo circular */
-    border-radius: 50px; /* Forma de píldora */
-    
-    /* Colores y Estética */
+    height: auto;
+    width: auto;
+    border-radius: 50px;
     background-color: #e10600;
     color: #fff;
     border: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     cursor: pointer;
-    z-index: 1000;
-    
-    /* Alineación interna */
+    z-index: 9999; /* Aumentamos el z-index al máximo */
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre emoji y texto */
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    gap: 10px;
+    transition: all 0.2s ease;
 }
 
 .chatbot-button:hover {
@@ -460,19 +455,18 @@ html, body {
 /* ===== VENTANA DE CHAT ===== */
 .chat-container {
     position: fixed;
-    bottom: 100px; 
-    right: 25px;
-    width: 350px;
+    bottom: 85px; /* Justo encima del botón */
+    right: 20px;
+    width: 320px; /* Un poco más angosta para móviles */
     height: 400px; 
-    max-height: 65vh; 
+    max-height: 70vh; 
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    display: none; /* Oculto por defecto */
+    display: none; 
     flex-direction: column;
-    z-index: 1001;
+    z-index: 10000; /* Siempre por encima de todo */
     overflow: hidden;
-    transition: all 0.3s ease;
     border: 1px solid #ddd;
 }
 

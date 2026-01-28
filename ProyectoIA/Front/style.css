@@ -189,6 +189,12 @@ body {
     margin-top: 1px;
     margin-bottom: 50px;
 }
+.section-title-2{
+    color: white;
+}
+.section-subtitle-2{
+    color: rgba(255, 255, 255, 0.623);
+}
 /* BIKE CARDS */
 .bike-card {
     background: #fff;
@@ -244,24 +250,60 @@ body {
     position: relative;
     z-index: 2;
 }
-/* CHATBOT FLOAT BUTTON */
-.chatbot-btn {
+.chatbot-button {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
+    
+    /* Tamaño y Forma */
+    padding: 10px 20px;
+    height: auto; /* Quitamos el alto fijo circular */
+    width: auto;  /* Quitamos el ancho fijo circular */
+    border-radius: 50px; /* Forma de píldora */
+    
+    /* Colores y Estética */
     background-color: #e10600;
     color: #fff;
     border: none;
-    font-size: 28px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     cursor: pointer;
     z-index: 1000;
+    
+    /* Alineación interna */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre emoji y texto */
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
-.chatbot-btn:hover {
+
+.chatbot-button:hover {
     background-color: #b80000;
+    transform: scale(1.05);
+}
+
+/* Estilo del texto del botón */
+.bot-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+}
+
+/* Estilo del emoji */
+.bot-icon {
+    font-size: 1.2rem;
+}
+
+/* Ajuste para que en pantallas muy pequeñas el texto desaparezca 
+   y no estorbe (opcional) */
+@media (max-width: 480px) {
+    .bot-text {
+        display: none; /* En móviles muy pequeños solo queda el robot */
+    }
+    .chatbot-button {
+        padding: 12px;
+        border-radius: 50%;
+    }
 }
 
 /* FOOTER */
@@ -407,4 +449,99 @@ footer {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+/* ===== VENTANA DE CHAT ===== */
+.chat-container {
+    position: fixed;
+    bottom: 100px; 
+    right: 25px;
+    width: 350px;
+    height: 400px; 
+    max-height: 65vh; 
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    z-index: 1001;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+/* Header del Chat */
+.chat-header {
+    background-color: #e10600;
+    color: white;
+    padding: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Cuerpo del Chat */
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto; /* Esto permite que los mensajes se desplacen dentro de la ventana pequeña */
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    font-size: 0.9rem;
+}
+
+.bot-message {
+    background-color: #eee;
+    color: #333;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #e10600;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Footer del Chat */
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 5px;
+}
+
+.chat-footer input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #e10600;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
 }

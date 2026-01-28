@@ -294,15 +294,21 @@ body {
     font-size: 1.2rem;
 }
 
-/* Ajuste para que en pantallas muy pequeñas el texto desaparezca 
-   y no estorbe (opcional) */
+/* MEDIA QUERY PARA MÓVILES (Para que se vea perfecto) */
 @media (max-width: 480px) {
     .bot-text {
-        display: none; /* En móviles muy pequeños solo queda el robot */
+        display: none; /* Escondemos el texto en móviles para que no estorbe */
     }
     .chatbot-button {
-        padding: 12px;
+        padding: 15px; /* Lo hacemos circular de nuevo */
         border-radius: 50%;
+        bottom: 15px;
+        right: 15px;
+    }
+    .chat-container {
+        width: 90%; /* Casi todo el ancho */
+        right: 5%;
+        bottom: 80px;
     }
 }
 

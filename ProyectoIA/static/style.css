@@ -301,8 +301,9 @@ body {
         right: 15px;
     }
     .chat-container {
-        width: 90%; /* Casi todo el ancho */
-        right: 5%;
+        width: 90% !important; /* Casi todo el ancho */
+        height: 70vh !important; /* Ocupa buena parte del alto */
+        right: 2.5%;
         bottom: 80px;
     }
 }
@@ -455,19 +456,42 @@ html, body {
 /* ===== VENTANA DE CHAT ===== */
 .chat-container {
     position: fixed;
-    bottom: 85px; /* Justo encima del botón */
-    right: 20px;
-    width: 320px; /* Un poco más angosta para móviles */
-    height: 400px; 
-    max-height: 70vh; 
+    bottom: 85px; 
+    right: 25px;
+    width: 450px; 
+    height: 500px; 
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     display: none; 
     flex-direction: column;
-    z-index: 10000; /* Siempre por encima de todo */
-    overflow: hidden;
+    z-index: 10000;
+    overflow: hidden; /* Importante para que el contenido no se salga */
     border: 1px solid #ddd;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    min-width: 350px;
+    min-height: 450px;
+    max-width: 90vw;
+    max-height: 85vh;
+}
+
+.resizer {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0; /* Lo movemos a la parte superior izquierda */
+    cursor: nwse-resize; 
+    z-index: 10001;
+}
+
+.resizer::after {
+    content: "◤"; /* Un símbolo visual de esquina */
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    color: #ccc;
+    font-size: 12px;
 }
 
 /* Header del Chat */
@@ -544,4 +568,121 @@ html, body {
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* ACTUALIZACIÓN PARA MENÚ MÓVIL */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        /* Posicionamos el menú de forma absoluta para que no empuje el logo */
+        position: absolute;
+        top: 100%; /* Aparece justo debajo de la navbar */
+        left: 0;
+        width: 100%;
+        background-color: rgba(139, 0, 0, 0.98) !important; /* Rojo Ducati sólido */
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border-bottom: 2px solid #e10600;
+        padding-bottom: 20px;
+    }
+
+    /* Aseguramos que el contenedor de la navbar no crezca en altura */
+    .navbar .container {
+        height: 60px; /* Ajusta este valor según el alto de tu logo */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Forzamos que el logo se mantenga centrado sin importar el menú */
+    .logo1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+        z-index: 1001;
+    }
+}
+
+/* Animación de "Escribiendo..." */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+    background-color: #eee;
+    border-radius: 15px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1.0); }
+}
+
+/* Ajustes para que las listas de la IA se vean bien */
+.bot-message ul, .bot-message ol {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.bot-message p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo para tablas si la IA las genera */
+.bot-message table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.bot-message th, .bot-message td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Contenedor de sugerencias */
+.quick-replies {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que se amontonen verticalmente */
+    overflow-x: auto;  /* Si hay muchos, se hace scroll horizontal */
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+
+.quick-replies::-webkit-scrollbar { display: none; } /* Oculta scroll en Chrome/Safari */
+
+/* Estilo de cada botón de sugerencia */
+.btn-suggestion {
+    white-space: nowrap; /* Evita que el texto salte de línea */
+    background-color: transparent;
+    border: 1px solid #e10600;
+    color: #e10600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-suggestion:hover {
+    background-color: #e10600;
+    color: white;
 }
